@@ -2,7 +2,7 @@ import pygame
 import os
 import random
 
-PIPE_IMAGE = [pygame.transform.scale2x(pygame.image.load(os.path.join("images", "pipe.png")))]
+PIPE_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join("images", "pipe.png")))
 
 
 class Pipe:
@@ -15,7 +15,7 @@ class Pipe:
         self.height = 0
         self.top = 0
         self.bottom = 0
-        self.PIPE_TOP = pygame.transform.flip(PIPE_IMAGE, xbool=False, ybool=True)
+        self.PIPE_TOP = pygame.transform.flip(PIPE_IMAGE, False, True)
         self.PIPE_BOTTOM = PIPE_IMAGE
 
         self.passed = False
