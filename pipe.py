@@ -6,11 +6,13 @@ PIPE_IMAGE = [pygame.transform.scale2x(pygame.image.load(os.path.join("images", 
 
 
 class Pipe:
+
+    GAP = 100
+    VELOCITY = 5
+
     def __init__(self, x):
         self.x = x
         self.height = 0
-        self.GAP = 100
-        self.VELOCITY = 5
         self.top = 0
         self.bottom = 0
         self.PIPE_TOP = pygame.transform.flip(PIPE_IMAGE, xbool=False, ybool=True)
