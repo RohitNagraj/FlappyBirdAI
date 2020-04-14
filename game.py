@@ -141,7 +141,7 @@ def run_game(config_path):
     population.add_reporter(stats)
 
     winner = population.run(main, 50)
-    pickle.dump(winner, open("./BestBird.pkl"))
+    pickle.dump(winner, open('./Model/best_model.pkl', 'wb'))
 
 
 if __name__ == '__main__':
